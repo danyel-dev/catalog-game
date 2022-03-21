@@ -1,0 +1,1 @@
+web: gunicorn catalog_games.wsgi --log-file -
