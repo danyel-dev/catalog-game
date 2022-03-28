@@ -1,5 +1,5 @@
-{% load compress %}
 {% load static %}
+{% load compress %}
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -7,25 +7,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - The Game Of Us</title>
+    <title>{% block 'title' %} Tela Inicial - The Game Of Us {% endblock %}</title>
+    
+    <link rel="stylesheet" href="{% static 'reset.css' %}">
     
     {% compress css %}
-        <link rel="stylesheet" type="text/x-sass" href="{% static 'partials/footer.scss' %}">
-        <link rel="stylesheet" href="{% static 'reset.css' %}">
-        
         {% block 'styles' %} {% endblock %}
-    {% endcompress css %}
-
-    <style>
-        #container {
-            min-height: 100%;
-            position: relative;
-        }
-    </style>
+    {% endcompress %}
 </head>
 <body>
-    <div id="container">
-        {% include 'partials/footer.html' %}
-    </div>
+    {% block 'body' %}
+        <p>Hello, World!</p>
+    {% endblock %}
 </body>
 </html>
