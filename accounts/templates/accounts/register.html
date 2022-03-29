@@ -8,5 +8,10 @@
 {% endblock %}
 
 {% block 'body' %}
-    <p>ola</p>
+    <p>oi</p>
+    <form method="post">
+        {% csrf_token %}
+
+        <input type="text">
+    </form>
 {% endblock %}

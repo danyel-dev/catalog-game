@@ -1,0 +1,5 @@
+.container {
+  background-color: rgba(0, 0, 0, 0.329); }
+  .container .title {
+    color: blueviolet;
+    border-bottom: 2px solid white; }
