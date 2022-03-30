@@ -8,10 +8,15 @@
 {% endblock %}
 
 {% block 'body' %}
-    <p>oi</p>
-    <form method="post">
-        {% csrf_token %}
-
-        <input type="text">
-    </form>
+    <div id="container-form">
+        <form method="post">
+            <input class="form-control" type="text" id="id_username" name="username" placeholder="Nome de usuário">
+    
+            <input class="form-control" type="email" id="id_email" name="email" placeholder="Email">
+    
+            <input class="form-control" type="password" id="id_password" name="password" placeholder="Senha">
+            
+            <input class="form-control" type="password" id="id_password2" name="password2" placeholder="Confirmar Senha">
+        </form>
+    </div>
 {% endblock %}

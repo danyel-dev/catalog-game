@@ -1,3 +1,15 @@
-p {
-    color: red;
+#container-form {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+        width: 400px;
+
+        input {
+            margin-bottom: 15px;
+        }
+    }
 }
