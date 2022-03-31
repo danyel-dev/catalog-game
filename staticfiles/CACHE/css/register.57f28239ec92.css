@@ -1,0 +1,12 @@
+#register-form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #register-form form {
+    width: 400px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.116); }
+    #register-form form input {
+      display: block;
+      margin: 0 auto; }

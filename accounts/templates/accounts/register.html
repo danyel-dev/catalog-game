@@ -8,11 +8,27 @@
 {% endblock %}
 
 {% block 'body' %}
-    <form method="POST">
-        {% csrf_token %}
+    <div id="register-form">
+        <form method="POST">
+            {% csrf_token %}
+            
+            {{ form.username.label_tag }}
+            {{ form.username }}
+            <small class="form-text text-muted">{{form.username.help_text}}</small>
 
-        {{ form }}
-
-        <button>Criar conta</button>
-    </form>
+            {{ form.email.label_tag }}
+            {{form.email}}
+            <small class="form-text text-muted">{{form.email.help_text}}</small>
+            
+            {{ form.password1.label_tag }}
+            {{form.password1}}
+            {{form.password1.help_text}}
+            
+            {{ form.password2.label_tag }}
+            {{form.password2}}
+            <small class="form-text text-muted">{{form.password2.help_text}}</small>
+            
+            <button class="btn btn-primary">Criar conta</button>
+        </form>
+    </div>
 {% endblock %}

@@ -1,0 +1,18 @@
+#register-form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #register-form form {
+    width: 450px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.116); }
+    #register-form form input {
+      width: 100%;
+      padding: 30px;
+      border: 0; }
+    #register-form form span {
+      display: block;
+      margin-bottom: 15px;
+      color: rgba(0, 0, 0, 0.7); }

@@ -1,4 +1,8 @@
-#container-form {
+body {
+    background-color: whitesmoke;
+}
+
+#register-form {
     height: 100%;
 
     display: flex;
@@ -6,10 +10,30 @@
     align-items: center;
 
     form {
-        width: 400px;
+        width: 500px;
+        padding: 20px;
+        border-radius: 5px;
+        background-color: white;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329);
 
         input {
-            margin-bottom: 15px;
+            width: 100%;
+            padding: 0px 10px;
+            height: 40px;
+            border-radius: 3px;
+            border: 0;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: whitesmoke;
+        }
+
+        ul li {
+            font-size: 14px;    
+        }
+
+        small {
+            display: block;
+            margin-bottom: 10px;
+            color: rgba(0, 0, 0, 0.7);
         }
     }
 }
