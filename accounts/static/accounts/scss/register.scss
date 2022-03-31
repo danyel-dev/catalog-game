@@ -1,39 +1,50 @@
-body {
-    background-color: whitesmoke;
+.title {
+    display: block;
+    text-align: center;
+    margin: 20px 0 15px 0;
+    color: rgba(0, 0, 0, 0.7);
+
+    font-size: 2rem;
 }
 
 #register-form {
-    height: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
+    
     form {
-        width: 500px;
+        margin-bottom: 20px;
+        width: 520px;
         padding: 20px;
         border-radius: 5px;
-        background-color: white;
+        background-color: whitesmoke;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329);
-
-        input {
-            width: 100%;
-            padding: 0px 10px;
-            height: 40px;
-            border-radius: 3px;
-            border: 0;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            background-color: whitesmoke;
-        }
-
-        ul li {
-            font-size: 14px;    
-        }
+        border: 1px solid rgba(0, 0, 0, 0.05);
 
         small {
             display: block;
-            margin-bottom: 10px;
-            color: rgba(0, 0, 0, 0.7);
+            margin-bottom: 8px;
+        }
+
+        p.invalid-feedback {
+            margin-bottom: 4px;
+        }
+
+        .button-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 20px;
+
+            p {
+                margin: 0;
+            }
+
+            a {
+                text-decoration: none;
+            }
         }
     }
 }

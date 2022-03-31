@@ -1,0 +1,14 @@
+body {
+  background-color: white; }
+
+#register-form {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #register-form form {
+    width: 470px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329); }

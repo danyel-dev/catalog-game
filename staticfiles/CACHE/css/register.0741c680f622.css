@@ -1,0 +1,21 @@
+.title {
+  display: block;
+  text-align: center;
+  margin: 20px 0 10px 0;
+  color: rgba(0, 0, 0, 0.7); }
+
+#register-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px !important; }
+  #register-form form {
+    padding: 20px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329); }
+    #register-form form small {
+      display: block;
+      margin-bottom: 8px; }
+    #register-form form p.invalid-feedback {
+      margin-bottom: 4px; }

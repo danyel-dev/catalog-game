@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block 'title' %} Criar uma conta {% endblock %}
 
@@ -8,27 +9,23 @@
 {% endblock %}
 
 {% block 'body' %}
+    <h1 class="title">Cadastro de usuário</h1>
+    
     <div id="register-form">
         <form method="POST">
             {% csrf_token %}
+            {{ form|crispy }}
             
-            {{ form.username.label_tag }}
-            {{ form.username }}
-            <small class="form-text text-muted">{{form.username.help_text}}</small>
-
-            {{ form.email.label_tag }}
-            {{form.email}}
-            <small class="form-text text-muted">{{form.email.help_text}}</small>
-            
-            {{ form.password1.label_tag }}
-            {{form.password1}}
-            {{form.password1.help_text}}
-            
-            {{ form.password2.label_tag }}
-            {{form.password2}}
-            <small class="form-text text-muted">{{form.password2.help_text}}</small>
-            
-            <button class="btn btn-primary">Criar conta</button>
+            <div class="button-link">
+                <button class="btn btn-primary">Criar conta</button>
+                <p>
+                    Já possui uma conta? <a href="#">Então clique aqui</a>
+                </p>
+            </div>
         </form>
     </div>
+
+    {% block scripts %}
+        <script src="{% static 'core/js/register.js' %}"></script>
+    {% endblock %}
 {% endblock %}
