@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
+
 {% load static %}
 {% load crispy_forms_tags %}
 
 {% block 'title' %} Criar uma conta {% endblock %}
 
 {% block 'styles' %}
-    <link rel="stylesheet" href="{% static 'accounts/scss/register.scss' %}" type="text/x-sass">
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'registration/scss/register.scss' %}" type="text/x-sass">
 {% endblock %}
 
 {% block 'body' %}
@@ -17,7 +19,7 @@
             {{ form|crispy }}
             
             <div class="button-link">
-                <button class="btn btn-primary">Criar conta</button>
+                <input type="submit" value="Criar conta" class="btn btn-primary">
                 <p>
                     Já possui uma conta? <a href="#">Então clique aqui</a>
                 </p>
@@ -26,6 +28,7 @@
     </div>
 
     {% block scripts %}
+        {{ block.super }}
         <script src="{% static 'core/js/register.js' %}"></script>
     {% endblock %}
 {% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block 'styles' %}    
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'registration/scss/login.scss' %}" type="text/x-sass">
+{% endblock %}
+
+{% block 'body' %}
+    <form action="post">
+        {{ form|crispy }}
+    </form>
+{% endblock %}
