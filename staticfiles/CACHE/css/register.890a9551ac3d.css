@@ -1,8 +1,0 @@
-#register-form {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  #register-form form {
-    width: 400px;
-    display: block; }

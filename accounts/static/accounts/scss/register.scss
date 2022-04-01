@@ -1,8 +1,7 @@
 .title {
-    display: block;
     text-align: center;
-    margin: 20px 0 15px 0;
-    color: rgba(0, 0, 0, 0.7);
+    margin: 25px 0 15px 0;
+    color: rgba(0, 0, 0, 0.6);
 
     font-size: 2rem;
 }
@@ -11,11 +10,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin: 0 5px;
+
     form {
-        margin-bottom: 20px;
-        width: 520px;
-        padding: 20px;
+        width: 500px;
+        padding: 15px 10px;
+
         border-radius: 5px;
         background-color: whitesmoke;
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329);

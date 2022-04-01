@@ -1,7 +1,0 @@
-#container-form {
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  #container-form form {
-    width: 400px; }
