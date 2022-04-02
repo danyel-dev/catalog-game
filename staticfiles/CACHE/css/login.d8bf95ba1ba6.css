@@ -1,0 +1,6 @@
+div#login-form {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  div#login-form form {
+    width: 450px; }

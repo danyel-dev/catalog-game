@@ -1,0 +1,12 @@
+#login-form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #login-form .title {
+    font-size: 1.8em;
+    color: rgba(0, 0, 0, 0.7);
+    margin-bottom: 40px; }
+  #login-form form {
+    width: 350px; }

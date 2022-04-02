@@ -1,0 +1,10 @@
+#login-form {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #login-form .title {
+    font-size: 2em; }
+  #login-form form {
+    width: 350px; }

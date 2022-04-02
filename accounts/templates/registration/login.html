@@ -1,15 +1,22 @@
 {% extends 'base.html' %}
-
 {% load static %}
-{% load crispy_forms_tags %}
 
-{% block 'styles' %}    
-    {{ block.super }}
+{% block 'title' %} Tela de login {% endblock %}
+
+{% block 'styles' %}
+    {{ block.super }}       
     <link rel="stylesheet" href="{% static 'registration/scss/login.scss' %}" type="text/x-sass">
 {% endblock %}
 
 {% block 'body' %}
-    <form action="post">
-        {{ form|crispy }}
-    </form>
+    <div id="login-form">
+        <form method="post">
+            <h1 class="title">Login</h1>
+
+            <input type="text" class="form-control" placeholder="Nome de usuário">
+            <input type="password" class="form-control" placeholder="Senha">
+            <button>Entrar</button>
+            <p>Ainda não possui uma conta? <a href="#">Então crie uma</a></p>
+        </form>
+    </div>
 {% endblock %}

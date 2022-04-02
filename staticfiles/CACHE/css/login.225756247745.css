@@ -1,0 +1,7 @@
+div#login-form {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  div#login-form form {
+    width: 350px; }

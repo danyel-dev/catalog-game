@@ -21,7 +21,7 @@
             <div class="button-link">
                 <input type="submit" value="Criar conta" class="btn btn-primary">
                 <p>
-                    Já possui uma conta? <a href="#">Então clique aqui</a>
+                    Já possui uma conta? <a href="{% url 'login' %}">Então clique aqui</a>
                 </p>
             </div>
         </form>
@@ -29,6 +29,6 @@
 
     {% block scripts %}
         {{ block.super }}
-        <script src="{% static 'core/js/register.js' %}"></script>
+        <script src="{% static 'registration/js/register.js' %}"></script>
     {% endblock %}
 {% endblock %}
