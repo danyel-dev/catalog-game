@@ -2,6 +2,7 @@ from django.shortcuts import redirect, render
 from django.http import HttpResponse
 
 from .forms import UserCreationForm
+from django.contrib import messages, auth
 
 
 def register(request):  
@@ -16,4 +17,17 @@ def register(request):
 
 
 def login(request):
+    if request.method == 'POST':
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+
+        user = auth.authenticate(request, username=username, password=password)
+
+        if not user:
+            messages.error(request, 'Campos incorretos, nome de usuário ou senha inválidos.')
+        else:
+            auth.login(request, user)
+            messages.success(request, 'Você fez login com sucesso!')
+            return redirect('/')
+
     return render(request, 'registration/login.html')

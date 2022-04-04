@@ -146,3 +146,14 @@ CRISPY_TEMPLATE_PACK = 'bootstrap4'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 django_on_heroku.settings(locals())
+
+
+from django.contrib.messages import constants
+
+MESSAGE_TAGS = {
+    constants.ERROR: 'alert alert-danger',
+    constants.DEBUG: 'alert alert-info',
+    constants.INFO: 'alert alert-info',
+    constants.SUCCESS: 'alert alert-success',
+    constants.WARNING: 'alert alert-warning',
+}
