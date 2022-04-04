@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="{% static 'registration/scss/login.scss' %}" type="text/x-sass">
 {% endblock %}
 
-{% block 'body' %}
+{% block 'header' %} {% endblock %}
+
+{% block 'main' %}
     <div id="login-form">
         <form method="post">
             {% csrf_token %}

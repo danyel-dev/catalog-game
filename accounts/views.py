@@ -27,7 +27,11 @@ def login(request):
             messages.error(request, 'Campos incorretos, nome de usuário ou senha inválidos.')
         else:
             auth.login(request, user)
-            messages.success(request, 'Você fez login com sucesso!')
             return redirect('/')
-
+            
     return render(request, 'registration/login.html')
+
+
+def logout(request):
+    auth.logout(request)
+    return redirect('login')
