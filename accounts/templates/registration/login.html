@@ -3,8 +3,7 @@
 
 {% block 'title' %} Tela de login {% endblock %}
 
-{% block 'styles' %}
-    {{ block.super }}       
+{% block 'styles' %} 
     <link rel="stylesheet" href="{% static 'registration/scss/login.scss' %}" type="text/x-sass">
 {% endblock %}
 
@@ -26,3 +25,5 @@
         </form>
     </div>
 {% endblock %}
+
+{% block 'footer' %} {% endblock %}

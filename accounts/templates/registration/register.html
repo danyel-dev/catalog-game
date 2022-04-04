@@ -6,7 +6,6 @@
 {% block 'title' %} Criar uma conta {% endblock %}
 
 {% block 'styles' %}
-    {{ block.super }}
     <link rel="stylesheet" href="{% static 'registration/scss/register.scss' %}" type="text/x-sass">
 {% endblock %}
 
@@ -34,3 +33,5 @@
         <script src="{% static 'registration/js/register.js' %}"></script>
     {% endblock %}
 {% endblock %}
+
+{% block 'footer' %} {% endblock %}
