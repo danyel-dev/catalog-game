@@ -19,12 +19,12 @@
     {% endcompress %}
 </head>
 <body>
-    <div id="container">
+    <div id="body">
         {% block 'header' %}
             {% include 'partials/_header.html' %}
         {% endblock %}
 
-        <main>
+        <main class="container">
             {% block 'main' %} {% endblock %}
         </main>
 
