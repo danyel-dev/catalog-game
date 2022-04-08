@@ -1,2 +1,10 @@
-document.getElementById('id_username').setAttribute('placeholder', 'Nome de usuário')
-document.getElementById('id_password').setAttribute('placeholder', 'Digite sua senha')
+let checkbox = document.getElementById('view_password');
+let inputPassword = document.getElementById('id_password')
+
+checkbox.addEventListener("click", function() {
+    if (this.checked) {
+        inputPassword.type = 'text'
+    } else {
+        inputPassword.type = 'password'
+    }
+})

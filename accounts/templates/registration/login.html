@@ -14,17 +14,36 @@
     <div id="login-form">
         <form method="post">
             {% csrf_token %}
-            <h1 class="title">Login</h1>
+            
+            <img id="img-gamer" src="{% static 'images/gamer.png' %}" alt="gamer">
+            <h1 class="title">Welcome</h1>
 
             {% include 'partials/_messages.html' %}
 
-            <input type="text" name="username" class="form-control" placeholder="Nome de usuário">
-            <input type="password" name="password" class="form-control" placeholder="Senha">
+            <div class="input-icon">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" class="form-control" placeholder="Username" value="{{ request.POST.username }}" id="id_username">
+            </div>
 
-            <button>Entrar</button>
-            <p>Ainda não possui uma conta? <a href="{% url 'register' %}">Então crie uma</a></p>
+            <div class="input-icon">
+                <i class="fa-solid fa-key"></i>
+                <input type="password" name="password" class="form-control" placeholder="Password" id="id_password">
+            </div>
+
+            <div class="checkbox-view-password">
+                <input type="checkbox" id="view_password">
+                <label for="view_password">Mostrar senha </label>
+            </div>
+
+            <button><i class="fa-solid fa-gamepad"></i> Logar </button>
+            <p>Don't have an account yet? <a href="{% url 'register' %}">then create a</a></p>
         </form>
     </div>
 {% endblock %}
 
 {% block 'footer' %} {% endblock %}
+
+
+{% block 'scripts' %}
+    <script src="{% static 'registration/js/login.js' %}"></script>
+{% endblock %}
