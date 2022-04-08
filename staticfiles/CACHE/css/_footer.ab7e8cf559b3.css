@@ -1,0 +1,18 @@
+footer {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  footer .icons {
+    display: flex;
+    gap: 1em; }
+    footer .icons i {
+      font-size: 2em; }
+  footer p {
+    margin: 0; }

@@ -6,3 +6,7 @@ html, body {
     min-height: 100%;
     position: relative;
 }
+
+main {
+    margin-bottom: 100px;
+}

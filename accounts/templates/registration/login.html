@@ -4,6 +4,7 @@
 {% block 'title' %} Tela de login {% endblock %}
 
 {% block 'styles' %} 
+    {{ block.super }}
     <link rel="stylesheet" href="{% static 'registration/scss/login.scss' %}" type="text/x-sass">
 {% endblock %}
 
