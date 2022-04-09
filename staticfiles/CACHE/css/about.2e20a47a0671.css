@@ -1,0 +1,20 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px; }
+  main .about-body {
+    border-radius: 10px;
+    width: 500px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.336);
+    background-color: white; }
+    main .about-body h1 {
+      padding-bottom: 2px;
+      font-size: 2em;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.164);
+      margin-bottom: 10px; }

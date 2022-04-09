@@ -1,6 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block 'styles' %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'core/scss/about.scss' %}" type="text/x-sass">
+{% endblock %}
 
 {% block 'main' %}
-    <p>oi, estou no about</p>
+    <div class="about-body">
+        <h1>Sobre o The Game Of Us</h1>
+
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit necessitatibus voluptatem numquam blanditiis? Autem et, numquam libero unde hic illo voluptatum eligendi dolore temporibus, distinctio quaerat non excepturi voluptatibus saepe! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit quisquam, tempore sunt nulla repudiandae deleniti autem laudantium fugit eveniet obcaecati rerum similique quibusdam cum nisi quae voluptas assumenda, illo quasi?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum rerum blanditiis itaque omnis aperiam reiciendis animi beatae magni, et ipsa a. Minima reiciendis totam porro repudiandae minus cum odio mollitia!
+        </p>
+
+        <a href="{% url 'home' %}">Acessar a página principal</a>
+    </div>
 {% endblock %}
