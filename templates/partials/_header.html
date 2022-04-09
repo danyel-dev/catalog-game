@@ -1,6 +1,12 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" style="background-color: white !important;">
+{% load static %}
+
+<nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
     <div class="container-fluid">
-        <a class="navbar-brand ms-5" href="/">The Game Of Us</a>
+        <a class="navbar-brand ms-5" href="/">
+            The Game Of Us
+            
+            <img src="{% static 'images/video-game.png' %}" alt="gamepad-gamer" class="gamepad">
+        </a>
         
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

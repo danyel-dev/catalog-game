@@ -10,3 +10,7 @@ html, body {
 a {
     text-decoration: none !important;
 }
+
+main {
+    margin-top: 50px;
+}

@@ -1,0 +1,6 @@
+nav#header a {
+  color: white;
+  padding: 5px; }
+
+nav#header a:hover {
+  background-color: rgba(0, 0, 0, 0.4); }
