@@ -1,0 +1,17 @@
+main {
+  padding-bottom: 150px; }
+
+#contact-div {
+  width: 100%;
+  margin: 50px auto 0 auto; }
+  #contact-div form {
+    width: 700px; }
+    #contact-div form input {
+      margin-bottom: 10px; }
+    #contact-div form button {
+      margin-top: 20px;
+      border: 0;
+      color: white;
+      background-color: #6b10a0;
+      padding: 5px 15px;
+      border-radius: 3px; }

@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from .forms import MessageForm
 
 
 def home(request):
@@ -11,4 +12,5 @@ def about(request):
 
 
 def contact(request):
-    return render(request, 'core/contact.html')
+    form = MessageForm()
+    return render(request, 'core/contact.html', {'form': form})

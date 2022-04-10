@@ -1,6 +1,30 @@
 {% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
 
+
+{% block 'styles' %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'core/scss/contact.scss' %}" type="text/x-sass">
+{% endblock %}
 
 {% block 'main' %}
-    <p>oi, estou no contact</p>
+    <div id="contact-div">
+        <h1>Como eu posso te ajudar?</h1>
+
+        <form>
+            {% include 'partials/_messages.html' %}
+
+            {% csrf_token %}
+            {{ form|crispy }}
+
+            <button>Enviar</button>
+            
+            <p>
+                <i class="fa-solid fa-circle-info"></i>
+                Preencha todos os campos, após enviar a mensagem, a resposta virá no seu endereço de E-mail. 
+            </p>
+        </form>
+
+    </div>
 {% endblock %}

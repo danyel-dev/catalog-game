@@ -1,0 +1,9 @@
+#contact-div {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #contact-div form {
+    width: 700px; }
+    #contact-div form input {
+      margin-bottom: 10px; }

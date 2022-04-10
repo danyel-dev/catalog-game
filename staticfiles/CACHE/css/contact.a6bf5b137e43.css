@@ -1,0 +1,27 @@
+main {
+  padding-bottom: 150px; }
+
+#contact-div {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  #contact-div form {
+    width: 700px; }
+    #contact-div form label {
+      margin-bottom: 2px; }
+    #contact-div form input {
+      margin-bottom: 15px; }
+    #contact-div form input, #contact-div form textarea {
+      background-color: whitesmoke; }
+    #contact-div form button {
+      margin-top: 15px;
+      border: 0;
+      color: white;
+      background-color: #6b10a0;
+      padding: 5px 15px;
+      border-radius: 3px; }
+    #contact-div form p {
+      margin-top: 20px;
+      color: #99e71b; }
