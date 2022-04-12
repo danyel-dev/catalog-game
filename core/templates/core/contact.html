@@ -12,10 +12,10 @@
     <div id="contact-div">
         <h1>Como eu posso te ajudar?</h1>
 
-        <form>
+        <form method="POST">
+            {% csrf_token %}
             {% include 'partials/_messages.html' %}
 
-            {% csrf_token %}
             {{ form|crispy }}
 
             <button>Enviar</button>
