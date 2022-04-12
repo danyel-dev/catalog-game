@@ -1,5 +1,11 @@
 from django.contrib import admin
-from .models import Message
+from django_summernote.admin import SummernoteModelAdmin
+from .models import Message, Game
+
+
+class GameAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
+    summernote_fields = 'about'
 
 
 admin.site.register(Message)
+admin.site.register(Game, GameAdmin)

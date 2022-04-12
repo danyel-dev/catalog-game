@@ -1,0 +1,48 @@
+.title {
+    text-align: center;
+    margin: 25px 0 15px 0;
+    color: rgba(0, 0, 0, .6);
+
+    font-size: 2rem;
+}
+
+#register-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 5px;
+
+    form {
+        width: 500px;
+        padding: 15px 10px;
+
+        border-radius: 5px;
+        background-color: whitesmoke;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, .05);
+
+        small {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        p.invalid-feedback {
+            margin-bottom: 4px;
+        }
+
+        .button-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            
+            margin-top: 20px;
+
+            p {
+                margin: 0;
+            }
+        }
+    }
+}

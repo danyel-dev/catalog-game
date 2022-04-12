@@ -1,12 +1,14 @@
-from email import message
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib import messages
 from .forms import MessageForm
 
+from .models import Game
+
 
 def home(request):
-    return render(request, 'core/home.html')
+    games = Game.objects.order_by('-id')
+    return render(request, 'core/home.html', {'games': games})
 
 
 def about(request):

@@ -1,0 +1,55 @@
+main {
+    padding-bottom: 150px;
+}
+
+#contact-div {
+    margin-top: 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-size: 2em;
+        margin-bottom: 30px;
+        border-bottom: 1px solid rgba(137, 43, 226, 0.2);
+        padding: 5px;
+        text-align: center;
+    }
+
+    form {
+        label {
+            margin-bottom: 2px;
+        }
+
+        input {
+            margin-bottom: 15px;
+        } 
+
+        input, textarea {
+            background-color: whitesmoke;
+        }
+
+        button {
+            margin-top: 15px;
+            border: 0;
+            color: white;
+            background-color: rgb(131, 16, 160);
+            padding: 5px 15px;
+            border-radius: 3px;
+        }
+
+        p.info-contact, p.warning-contact {
+            margin-top: 20px;
+        }
+
+        p.info-contact {
+            color: rgb(85, 79, 152);
+        }
+
+        p.warning-contact {
+            color: rgba(255, 0, 0, .7);
+        }
+    }
+}

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'accounts',
     'compressor',
     'crispy_forms',
+    'django_summernote',
 ]
 
 # Django compressor
@@ -128,6 +129,10 @@ TIME_ZONE = 'America/Sao_Paulo'
 USE_I18N = True
 
 USE_TZ = True
+
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Static files (CSS, JavaScript, Images)
