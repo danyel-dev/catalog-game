@@ -40,9 +40,16 @@ main {
             border-radius: 3px;
         }
 
-        p {
+        p.info-contact, p.warning-contact {
             margin-top: 20px;
+        }
+
+        p.info-contact {
             color: rgb(85, 79, 152);
+        }
+
+        p.warning-contact {
+            color: rgba(255, 0, 0, .7);
         }
     }
 }

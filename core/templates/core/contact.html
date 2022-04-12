@@ -18,12 +18,19 @@
 
             {{ form|crispy }}
 
-            <button>Enviar</button>
-            
-            <p>
-                <i class="fa-solid fa-circle-info"></i>
-                Preencha todos os campos, após enviar a mensagem, a resposta virá no seu endereço de E-mail. 
-            </p>
+            {% if user.is_authenticated %}
+                <button>Enviar</button>
+                
+                <p class="info-contact">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Preencha todos os campos, após enviar a mensagem, a resposta virá no seu endereço de E-mail. 
+                </p>
+            {% else %}
+                <p class="warning-contact">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    Desculpe, para enviar uma mensagem você deve primeiro entrar com a sua conta. <a href="#">Acessar conta</a> 
+                </p>
+            {% endif %}
         </form>
 
     </div>

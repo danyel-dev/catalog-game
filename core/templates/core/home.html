@@ -2,6 +2,38 @@
 {% load static %}
 
 
+{% block 'styles' %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'core/scss/home.scss' %}" type="text/x-sass">
+{% endblock %}
+
 {% block 'main' %}
-    <p>oi, eu sou a home</p>
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="card mb-5 shadow-sm">
+                <a href="#">
+                    <img src="{% static 'images/gamer.png' %}" class="img-fluid">
+                </a>
+                
+                <div class="card-body">
+                    <div class="card-title">
+                        <a href="#" class="button-category">
+                            Ação
+                        </a>
+                        
+                        <h1><a href="#" class="title-post">The last of us</a></h1>
+                    </div>
+
+                    <div class="card-text">
+                        <p>Uma árvore binária é uma estrutura de dados caracterizada por: Ou não tem elemento algum (árvore vazia).</p>
+                        
+                        <a class="comments" href="#">
+                            <i class="fa fa-comment"></i>
+                            <span>5 comentários</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
