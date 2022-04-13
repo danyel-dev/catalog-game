@@ -39,11 +39,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # apps
     'core',
     'accounts',
+    # libs
     'compressor',
     'crispy_forms',
     'django_summernote',
+    'taggit',
 ]
 
 # Django compressor

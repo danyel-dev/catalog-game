@@ -18,19 +18,25 @@
                     
                     <div class="card-body">
                         <div class="card-title">
-                            <h1><a href="#" class="title-post">{{ game.title }}</a></h1>
+                            {% for tag in game.tags.all %}
+                                <a href="#" class="tag-genero">{{ tag }}</a>
+                            {% endfor %}
+
+                            <h1>
+                                <a href="#" class="title-post">{{ game.title }}</a>
+                            </h1>
                         </div>
                         
                         <div class="card-text">
                             <p>{{ game.about|safe }}</p>
                             
                             <div class="comments" href="#">
-                                <div>
+                                <p class="text-muted">
                                     <i class="fa fa-comment"></i>
                                     <span>5 comentários</span>
-                                </div>
-
-                                <a href="#" class="btn btn-primary">Ler Mais</a>
+                                </p>
+                                
+                                <a href="#" class="btn btn-outline-primary">Ler Mais</a>
                             </div>
                         </div>
                     </div>

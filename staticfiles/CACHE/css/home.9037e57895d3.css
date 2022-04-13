@@ -1,0 +1,19 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  padding-bottom: 150px; }
+
+.card {
+  background-color: white; }
+  .card .tag-genero {
+    background-color: rgba(174, 0, 255, 0.527);
+    padding: 5px;
+    color: #ae00ff;
+    border-radius: 2px; }
+  .card .comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }

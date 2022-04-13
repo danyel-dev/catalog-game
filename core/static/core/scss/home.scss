@@ -9,11 +9,40 @@ main {
 
 .card {
     background-color: white;
+    
+    .tag-genero {
+        background-color: rgba(111, 0, 255, 0.3);
+        padding: 5px;
+        color: rgb(111, 0, 255);
+        border-radius: 3px;
+    }
+
+    .card-title {
+        h1 {
+            font-size: 1.6em;
+            margin: 15px 0 0 0;
+
+            a {
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
+    }
+
+    .card-text {
+        p {
+            margin: 0;
+        }
+
+        .comments {
+            margin-top: 10px;
+        }
+    }
+
+    .comments {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
-.comments {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}

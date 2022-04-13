@@ -1,0 +1,17 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  padding-bottom: 150px; }
+
+.card {
+  background-color: white; }
+  .card .tag-genero {
+    background-color: #ae00ff;
+    padding: 5px; }
+  .card .comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }

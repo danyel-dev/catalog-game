@@ -1,0 +1,24 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  padding-bottom: 150px; }
+
+.card {
+  background-color: white; }
+  .card .tag-genero {
+    background-color: rgba(174, 0, 255, 0.3);
+    padding: 5px;
+    color: #8820b8;
+    border-radius: 2px; }
+  .card .card-title h1 {
+    font-size: 2em;
+    margin: 5px 0 0 0; }
+    .card .card-title h1 a {
+      color: rgba(0, 0, 0, 0.7); }
+  .card .comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
