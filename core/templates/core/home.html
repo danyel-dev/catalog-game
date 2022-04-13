@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
 
-
 {% block 'styles' %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'core/scss/home.scss' %}" type="text/x-sass">
@@ -45,5 +44,5 @@
         {% endfor %}
     </div>
 
-    {% include "partials/_pagination.html" %}
+    <!-- {% include "partials/_pagination.html" %} -->
 {% endblock %}
