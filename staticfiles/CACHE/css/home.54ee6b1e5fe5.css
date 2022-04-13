@@ -1,0 +1,32 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  padding-bottom: 150px; }
+
+.card-first {
+  background-color: rgba(0, 0, 0, 0.2) !important; }
+  .card-first .comments p {
+    color: rgba(0, 0, 0, 0.6) !important; }
+
+.card {
+  background-color: white; }
+  .card .tag-genero-first {
+    background-color: rgba(137, 43, 226, 0.6);
+    padding: 5px;
+    color: white;
+    border-radius: 3px; }
+  .card .card-title h1 {
+    font-size: 1.6em;
+    margin: 15px 0 0 0; }
+    .card .card-title h1 a {
+      color: rgba(0, 0, 0, 0.7); }
+  .card .card-text p {
+    margin: 0; }
+  .card .card-text .comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; }
