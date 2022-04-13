@@ -4,43 +4,49 @@
 {% block 'styles' %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'core/scss/home.scss' %}" type="text/x-sass">
-{% endblock %}
-
+    {% endblock %}
+    
 {% block 'main' %}
     <div class="row">
         {% for game in games %}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm">
-                    <a href="#">
-                        <img src="{{ game.image.url }}" class="img-fluid">
-                    </a>
-                    
-                    <div class="card-body">
-                        <div class="card-title">
-                            {% for tag in game.tags.all %}
-                                <a href="#" class="tag-genero">{{ tag }}</a>
-                            {% endfor %}
-
-                            <h1>
-                                <a href="#" class="title-post">{{ game.title }}</a>
-                            </h1>
-                        </div>
+            {% if forloop.first %}
+                <p>oiiii</p>
+            {% else %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-5 shadow-sm">
+                        <a href="#">
+                            <img src="{{ game.image.url }}" class="img-fluid">
+                        </a>
                         
-                        <div class="card-text">
-                            <p>{{ game.about|safe }}</p>
+                        <div class="card-body">
+                            <div class="card-title">
+                                {% for tag in game.tags.all %}
+                                    <small href="#" class="tag-genero">{{ tag }}</small>
+                                {% endfor %}
+
+                                <h1>
+                                    <a href="#" class="title-post">{{ game.title }}</a>
+                                </h1>
+                            </div>
                             
-                            <div class="comments" href="#">
-                                <p class="text-muted">
-                                    <i class="fa fa-comment"></i>
-                                    <span>5 Comentários</span>
-                                </p>
+                            <div class="card-text">
+                                <p>{{ game.about|safe }}</p>
                                 
-                                <a href="#" class="btn btn-outline-primary">Ler Mais</a>
+                                <div class="comments" href="#">
+                                    <p class="text-muted">
+                                        <i class="fa fa-comment"></i>
+                                        <span>5 Comentários</span>
+                                    </p>
+                                    
+                                    <a href="#" class="btn btn-outline-primary">Ler Mais</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            {% endif %}
         {% endfor %}
     </div>
+
+    {% include 'partials/_pagination.html' %}
 {% endblock %}
