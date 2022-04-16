@@ -4,9 +4,18 @@
 {% block 'styles' %}
     {{ block.super }}
     <link rel="stylesheet" href="{% static 'core/scss/home.scss' %}" type="text/x-sass">
-    {% endblock %}
+{% endblock %}
     
 {% block 'main' %}
+    <form method="GET" id="search-posts">
+        <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Pesquise pelo nome do jogo" class="form-control" name="search" value="{{request.GET.search}}">
+        </div>
+    </form>
+
+    <hr>
+
     <div class="row">
         {% for game in games %}
             <div class="col-lg-4 col-md-6 col-sm-12">

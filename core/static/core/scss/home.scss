@@ -7,6 +7,26 @@ main {
     padding-bottom: 150px;
 }
 
+#search-posts {
+    .search-icon {
+        position: relative;
+
+        input {
+            width: 500px;
+            margin-bottom: 30px;
+            padding-left: 35px;
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.192);
+        }
+
+        i {
+            position: absolute;
+            top: 11px;
+            left: 13px;
+            color: grey;
+        }
+    }
+}
+
 .card {
     background-color: white;
     
