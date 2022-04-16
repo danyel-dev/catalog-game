@@ -8,7 +8,20 @@ from .models import Game
 
 
 def home(request):
-    games = Game.objects.order_by('-id')
+    search = request.GET.get('search')
+    
+    if search:
+        games = Game.objects.order_by('-id').filter(title__icontains=search)
+        qtd_games = games.count()
+        
+        if qtd_games == 1:
+            messages.success(request, f'1 resultado encontrado para "{search}"')
+        elif qtd_games > 1:
+            messages.success(request, f'{qtd_games} resultados encontrados para "{search}"')
+        else:
+            messages.error(request, f'Desculpe, não foi encontrado nenhum resultado para "{search}"')
+    else:
+        games = Game.objects.order_by('-id')
 
     paginator = Paginator(games, 6)
     page = request.GET.get('page')

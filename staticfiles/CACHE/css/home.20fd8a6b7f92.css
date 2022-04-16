@@ -1,0 +1,48 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  padding-bottom: 150px; }
+
+#search-posts .search-icon {
+  position: relative; }
+  #search-posts .search-icon input {
+    max-width: 500px;
+    min-width: 280px;
+    margin-bottom: 30px;
+    padding-left: 35px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.192); }
+  #search-posts .search-icon i {
+    position: absolute;
+    top: 11px;
+    left: 13px;
+    color: grey; }
+
+.card {
+  background-color: white; }
+  .card .tag-genero {
+    display: inline-block;
+    background-color: rgba(111, 0, 255, 0.2);
+    padding: 3px 5px;
+    color: #6f00ff;
+    border-radius: 3px;
+    margin-bottom: 5px; }
+  .card .card-title h1 {
+    font-size: 1.6em;
+    margin: 15px 0 0 0; }
+    .card .card-title h1 a {
+      color: rgba(0, 0, 0, 0.7); }
+  .card .card-text p {
+    margin: 0; }
+  .card .card-text .comments {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px; }
+
+#error-search {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto 0 auto; }

@@ -17,41 +17,50 @@
     <hr>
 
     <div class="row">
-        {% for game in games %}
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="card mb-5 shadow-sm">
-                    <a href="#">
-                        <img src="{{ game.image.url }}" class="img-fluid">
-                    </a>
-                    
-                    <div class="card-body">
-                        <div class="card-title">
-                            {% for tag in game.tags.all %}
-                                <small href="#" class="tag-genero">{{ tag }}</small>
-                            {% endfor %}
+        {% include 'partials/_messages.html' %}
 
-                            <h1>
-                                <a href="#" class="title-post">{{ game.title }}</a>
-                            </h1>
-                        </div>
+        {% if games %}
+            {% for game in games %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-5 shadow-sm">
+                        <a href="#">
+                            <img src="{{ game.image.url }}" class="img-fluid">
+                        </a>
                         
-                        <div class="card-text">
-                            <p>{{ game.about|safe }}</p>
+                        <div class="card-body">
+                            <div class="card-title">
+                                {% for tag in game.tags.all %}
+                                    <small href="#" class="tag-genero">{{ tag }}</small>
+                                {% endfor %}
+
+                                <h1>
+                                    <a href="#" class="title-post">{{ game.title }}</a>
+                                </h1>
+                            </div>
                             
-                            <div class="comments" href="#">
-                                <p class="text-muted">
-                                    <i class="fa fa-comment"></i>
-                                    <span>5 Comentários</span>
-                                </p>
+                            <div class="card-text">
+                                <p>{{ game.about|safe }}</p>
                                 
-                                <a href="#" class="btn btn-outline-primary">Ler Mais</a>
+                                <div class="comments" href="#">
+                                    <p class="text-muted">
+                                        <i class="fa fa-comment"></i>
+                                        <span>5 Comentários</span>
+                                    </p>
+                                    
+                                    <a href="#" class="btn btn-outline-primary">Ler Mais</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <img id="error-search" src="{% static 'images/404-error.png' %}" alt="error-not-search">
+            <a href="{% url 'home' %}" class="text-center" id="link-error-search">Voltar para página principal</a>
+        {% endif %}
     </div>
 
-    {% include 'partials/_pagination.html' %}
+    {% if games %}
+        {% include 'partials/_pagination.html' %}
+    {% endif %}
 {% endblock %}
