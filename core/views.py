@@ -1,4 +1,4 @@
-from django.shortcuts import redirect, render
+from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.paginator import Paginator
@@ -28,6 +28,11 @@ def home(request):
     games = paginator.get_page(page)
 
     return render(request, 'core/home.html', {'games': games})
+
+
+def game_detail(request, id_game):
+    game = get_object_or_404(Game, id = id_game)
+    return render(request, 'core/game_detail.html', {'game': game})
 
 
 def about(request):

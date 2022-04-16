@@ -23,7 +23,7 @@
             {% for game in games %}
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card mb-5 shadow-sm">
-                        <a href="#">
+                        <a href="{% url 'game-detail' game.id %}">
                             <img src="{{ game.image.url }}" class="img-fluid">
                         </a>
                         
