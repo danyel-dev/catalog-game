@@ -10,7 +10,7 @@ from .models import Game
 def home(request):
     games = Game.objects.order_by('-id')
 
-    paginator = Paginator(games, 7)
+    paginator = Paginator(games, 6)
     page = request.GET.get('page')
     games = paginator.get_page(page)
 
