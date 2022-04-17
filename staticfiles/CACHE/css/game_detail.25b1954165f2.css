@@ -1,0 +1,45 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; }
+  #banner-game .banner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #582f80; }
+    #banner-game .banner img {
+      width: 600px;
+      height: 300px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7); }
+    #banner-game .banner .banner-body {
+      width: 400px; }
+      #banner-game .banner .banner-body h1 {
+        font-size: 2em;
+        margin-bottom: 5px;
+        color: white; }
+      #banner-game .banner .banner-body p {
+        margin-bottom: 10px;
+        line-height: 22px;
+        font-size: 15px; }
+        #banner-game .banner .banner-body p span {
+          color: whitesmoke !important; }
+      #banner-game .banner .banner-body .banner-text .tag-genero {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.6);
+        padding: 0 5px;
+        color: whitesmoke;
+        border-radius: 3px;
+        margin-bottom: 5px; }
+      #banner-game .banner .banner-body .banner-favorites {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px; }
+        #banner-game .banner .banner-body .banner-favorites i {
+          color: wheat; }

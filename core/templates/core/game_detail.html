@@ -11,7 +11,7 @@
 {% block 'main' %}
     <div id="banner-game">
         <div class="banner">
-            <img src="{{ game.image.url }}" alt="{{ game.title }}">
+            <img src="{{ game.image.url }}" alt="{{ game.title }}" class="img-fluid">
             
             <div class="banner-body">
                 <div class="banner-text">
@@ -27,6 +27,7 @@
                     <a href=""><i class="fa-solid fa-heart"></i></a>
 
                     <select>
+                        <option selected>Escolha uma opção</option>
                         <option>Dropado</option>
                         <option>Jogar Depois</option>
                         <option>Gostei</option>
