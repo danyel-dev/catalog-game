@@ -1,6 +1,39 @@
 {% extends 'base.html' %}
+{% load static %}
+
+
+{% block 'styles' %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'core/scss/game_detail.scss' %}" type="text/x-sass">
+{% endblock %}
 
 
 {% block 'main' %}
-    <p>Hello, World!!</p>
+    <div id="banner-game">
+        <div class="banner">
+            <img src="{{ game.image.url }}" alt="{{ game.title }}">
+            
+            <div class="banner-body">
+                <div class="banner-text">
+                    <h1>{{ game.title }}</h1>
+                    <p>{{ game.about|safe }}</p>
+                    
+                    {% for tag in game.tags.all %}
+                        <small class="tag-genero">{{ tag }}</small>
+                    {% endfor %}
+                </div>
+                    
+                <div class="banner-favorites">
+                    <a href=""><i class="fa-solid fa-heart"></i></a>
+
+                    <select>
+                        <option>Dropado</option>
+                        <option>Jogar Depois</option>
+                        <option>Gostei</option>
+                        <option>Jogando</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

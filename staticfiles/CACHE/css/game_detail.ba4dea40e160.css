@@ -1,0 +1,10 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  padding-bottom: 150px; }
+
+#banner-game .banner {
+  width: 50%;
+  display: flex;
+  justify-content: center; }

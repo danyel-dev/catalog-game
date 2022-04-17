@@ -1,0 +1,20 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  margin-top: 10px; }
+  #banner-game .banner {
+    display: flex;
+    justify-content: space-around;
+    gap: 1em; }
+    #banner-game .banner img {
+      width: 600px;
+      height: 300px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7); }
+    #banner-game .banner .banner-body {
+      width: 400px; }
+      #banner-game .banner .banner-body h1 {
+        font-size: 1.5em; }

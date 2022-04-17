@@ -1,0 +1,11 @@
+main {
+  padding-bottom: 150px; }
+
+.banner-game {
+  position: relative; }
+
+.banner-body {
+  position: absolute;
+  top: 0;
+  height: 0;
+  display: flex; }

@@ -1,0 +1,11 @@
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  margin: auto; }
+  #banner-game .card-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #banner-game .card-img-overlay .banner-body {
+      width: 600px; }

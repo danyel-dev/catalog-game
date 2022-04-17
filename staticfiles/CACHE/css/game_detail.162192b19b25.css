@@ -1,0 +1,10 @@
+main {
+  padding-bottom: 150px; }
+
+#banner-game .banner-body {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: aquamarine;
+  position: absolute;
+  top: 50%; }

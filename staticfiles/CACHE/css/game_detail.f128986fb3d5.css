@@ -1,0 +1,10 @@
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  width: 70%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between; }
+  #banner-game .banner-game-body {
+    display: flex; }

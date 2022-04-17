@@ -1,0 +1,9 @@
+main {
+  padding-bottom: 150px; }
+
+.card-img-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .card-img-overlay .banner-body {
+    width: 300px; }

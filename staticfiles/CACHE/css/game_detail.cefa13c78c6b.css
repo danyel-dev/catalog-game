@@ -1,0 +1,9 @@
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }

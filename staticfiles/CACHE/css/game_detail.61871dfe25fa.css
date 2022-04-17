@@ -1,0 +1,14 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #banner-game .banner {
+    width: 70%;
+    display: flex;
+    justify-content: center; }

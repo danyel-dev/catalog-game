@@ -1,0 +1,12 @@
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  width: 300px;
+  margin: auto;
+  display: flex;
+  justify-content: center; }
+  #banner-game .banner-game-body {
+    display: flex;
+    justify-content: center;
+    align-items: center; }

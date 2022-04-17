@@ -1,0 +1,10 @@
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 400px; }
+  #banner-game .banner-body {
+    text-align: center; }

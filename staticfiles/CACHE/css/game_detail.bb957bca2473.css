@@ -1,0 +1,29 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  margin-top: 20px; }
+  #banner-game .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em; }
+    #banner-game .banner img {
+      width: 600px;
+      height: 300px;
+      box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7); }
+    #banner-game .banner .banner-body {
+      width: 400px; }
+      #banner-game .banner .banner-body h1 {
+        font-size: 1.5em; }
+      #banner-game .banner .banner-body .banner-options .tag-genero {
+        font-size: 14px;
+        display: inline-block;
+        background-color: rgba(111, 0, 255, 0.2);
+        padding: 1px 5px;
+        color: #6f00ff;
+        border-radius: 3px;
+        margin-bottom: 5px; }

@@ -1,0 +1,60 @@
+body {
+    background-color: whitesmoke;
+}
+
+main {
+    padding-bottom: 150px;
+}
+
+#banner-game {
+    margin-top: 20px;
+
+    .banner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1.5em;
+
+        img {
+            width: 600px;
+            height: 300px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner-body {
+            width: 400px;
+
+            h1 {
+                font-size: 2em;
+                margin-bottom: 5px;
+            }
+
+            p {
+                margin-bottom: 10px;
+                line-height: 25px;
+            }
+
+            .banner-text {
+                .tag-genero {
+                    display: inline-block;
+                    background-color: rgba(111, 0, 255, 0.2);
+                    padding: 0 5px;
+                    color: rgb(111, 0, 255);
+                    border-radius: 3px;
+                    margin-bottom: 5px;
+                }
+            }
+
+            .banner-favorites {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+                
+                i {
+                    color: rgba(0, 0, 0, 0.6);
+                }
+            }
+        }
+    }
+}

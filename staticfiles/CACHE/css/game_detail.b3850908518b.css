@@ -1,0 +1,7 @@
+main {
+  padding-bottom: 150px; }
+
+.banner-body {
+  display: flex;
+  flex-direction: column;
+  width: 300px; }

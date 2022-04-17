@@ -1,0 +1,17 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  padding-bottom: 150px; }
+
+#banner-game {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  #banner-game .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    #banner-game .banner img {
+      width: 500px;
+      height: 350px; }
