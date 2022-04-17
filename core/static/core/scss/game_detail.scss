@@ -13,10 +13,10 @@ main {
 
     .banner {
         width: 100%;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        // background-color: aqua;
 
         img {
             width: 600px;
@@ -25,6 +25,7 @@ main {
         }
 
         .banner-body {
+            border-radius: 2px;
             box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.7);
             padding: 0 20px;
             width: 400px;   
@@ -70,6 +71,25 @@ main {
                 i {
                     color: wheat;
                 }
+            }
+        }
+    }
+}
+
+
+@media(max-width: 1000px) {
+    #banner-game {
+        .banner {
+            flex-direction: column;
+
+            img {
+                width: max-content;
+                height: max-content;
+            }
+
+            .banner-body {
+                width: 100%;  
+                padding: 15px; 
             }
         }
     }
