@@ -16,7 +16,7 @@
             <div class="banner-body">
                 <div class="banner-text">
                     <h1>{{ game.title }}</h1>
-                    <p>Horizon Zero Dawn é um jogo eletrônico de RPG de ação desenvolvido pela Guerrilla Games e publicado pela Sony Interactive Entertainment. Foi lançado em 28 de fevereiro de 2017 para PlayStation 4 e em 7 de agosto de 2020 para Microsoft Windows.</p>
+                    <p>{{ game.description }}</p>
                     
                     {% for tag in game.tags.all %}
                         <small class="tag-genero">{{ tag }}</small>

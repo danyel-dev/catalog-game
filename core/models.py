@@ -12,6 +12,7 @@ class Message(models.Model):
 
 class Game(models.Model):
     title = models.CharField(max_length=100, verbose_name='Título do Game')
+    description = models.CharField('Descrição do jogo', max_length=255)
     about = models.TextField(verbose_name='Sobre o jogo')
     developer = models.CharField(max_length=100, verbose_name='Desenvolvedora')
     distributor = models.CharField(max_length=100, verbose_name='Distribuidora')
