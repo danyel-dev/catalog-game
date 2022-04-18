@@ -41,6 +41,19 @@
     <div id="about-game">
         <h1>Sobre este jogo</h1>
 
-        {{ game.about|safe }}
+        <p class="text-about">{{ game.about|safe }}</p>
+
+        <div id="comments-game">
+            <h1>Comentários</h1>
+
+            <div class="comments">
+                <div class="comment">
+                    {% for comment in game.comment.all %}
+                        <p>{{ comment.comment }}</p>
+                        <small class="text-muted">{{ comment.created_at }}</small>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
