@@ -1,6 +1,6 @@
-from dataclasses import field
+from dataclasses import field, fields
 from django import forms
-from .models import Message
+from .models import Message, Comment
 
 
 class MessageForm(forms.ModelForm):
@@ -14,6 +14,18 @@ class MessageForm(forms.ModelForm):
             }),
             
             'message': forms.Textarea(attrs={
-                'placeholder': 'Digite seu comentario aqui',
+                'placeholder': 'Digite a sua mensagem aqui',
             }),
+        }
+
+
+class CommentForm(forms.ModelForm):
+    class Meta:
+        model = Comment
+        fields = ('comment',)
+
+        widgets = {
+            'comment': forms.TextInput(attrs={
+                'placeholder': 'Digite o seu comentário aqui'
+            })
         }
