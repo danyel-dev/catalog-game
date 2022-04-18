@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load MyFilters %}
 
 {% block 'styles' %}
     {{ block.super }}
@@ -46,14 +46,14 @@
         <div id="comments-game">
             <h1>Comentários</h1>
 
-            <div class="comments">
+            {% for comment in game.comment.all %}
                 <div class="comment">
-                    {% for comment in game.comment.all %}
-                        <p>{{ comment.comment }}</p>
-                        <small class="text-muted">{{ comment.created_at }}</small>
-                    {% endfor %}
+                    <strong>{{ comment.user.first_name }} {{ comment.user.last_name }}</strong>
+                    <p>{{ comment.comment }}</p>
+                    
+                    <small class="text-muted">- {{ comment.created_at }}</small>
                 </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}
