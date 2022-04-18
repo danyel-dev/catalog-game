@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.paginator import Paginator
-from .forms import MessageForm
+from .forms import MessageForm, CommentForm
 
 from .models import Game
 
@@ -32,11 +32,10 @@ def home(request):
 
 def game_detail(request, id_game):
     game = get_object_or_404(Game, id = id_game)
-    return render(request, 'core/game_detail.html', {'game': game})
-
-
-def about(request):
-    return render(request, 'core/about.html')
+    
+    form = CommentForm(request.POST or None)
+    
+    return render(request, 'core/game_detail.html', {'game': game, 'form': form})
 
 
 def contact(request):
@@ -52,3 +51,7 @@ def contact(request):
         return redirect('contact')
 
     return render(request, 'core/contact.html', {'form': form})
+
+
+def about(request):
+    return render(request, 'core/about.html')

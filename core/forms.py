@@ -25,7 +25,8 @@ class CommentForm(forms.ModelForm):
         fields = ('comment',)
 
         widgets = {
-            'comment': forms.TextInput(attrs={
-                'placeholder': 'Digite o seu comentário aqui'
+            'comment': forms.Textarea(attrs={
+                'placeholder': 'Digite o seu comentário aqui',
+                'class': 'form-control'
             })
         }
