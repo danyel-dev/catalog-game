@@ -28,7 +28,7 @@
             {% else %}
                 <p class="warning-contact">
                     <i class="fa-solid fa-triangle-exclamation"></i>
-                    Desculpe, para enviar uma mensagem você deve primeiro entrar com a sua conta. <a href="#">Acessar conta</a> 
+                    Desculpe, para enviar uma mensagem você deve primeiro entrar com a sua conta. <a href="{% url 'login' %}">Acessar conta</a> 
                 </p>
             {% endif %}
         </form>

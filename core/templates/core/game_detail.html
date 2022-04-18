@@ -46,23 +46,35 @@
         <div id="comments-game">
             <h1>Comentários</h1>
 
-            {% for comment in game.comment.all %}
-                <div class="comment">
-                    <strong>{{ comment.user.first_name }} {{ comment.user.last_name }}</strong>
-                    <p>{{ comment.comment }}</p>
-                    
-                    <small class="text-muted">- {{ comment.created_at }}</small>
-                </div>
-            {% endfor %}
+            {% if game.comment.all %}
+                {% for comment in game.comment.all %}
+                    <div class="comment">
+                        <strong>{{ comment.user.first_name }} {{ comment.user.last_name }}</strong>
+                        <p>{{ comment.comment }}</p>
+                        
+                        <small class="text-muted">- {{ comment.created_at }}</small>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <p class="text-muted">Nenhum comentário</p>
+            {% endif %}
 
             <hr>
-
+            
             <form method="POST">
                 {% csrf_token %}
 
                 {% for field in form %}
                     {{ field }}
-                    <button class="btn btn-primary">Comentar</button>
+                    
+                    {% if user.is_authenticated %}
+                        <button class="btn btn-primary">Comentar</button>
+                    {% else %}
+                        <p class="warning-comment">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                            Desculpe, para fazer um comentário você deve primeiro entrar com a sua conta. <a href="{% url 'login' %}">Acessar conta.</a> 
+                        </p>
+                    {% endif %}    
                 {% endfor %}
             </form>
         </div>
