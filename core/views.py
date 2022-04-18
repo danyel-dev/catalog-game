@@ -32,9 +32,17 @@ def home(request):
 
 def game_detail(request, id_game):
     game = get_object_or_404(Game, id = id_game)
-    
     form = CommentForm(request.POST or None)
     
+    if request.method == 'POST':
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.user = request.user
+            form.game = game 
+            form.save()
+
+        form = CommentForm()
+
     return render(request, 'core/game_detail.html', {'game': game, 'form': form})
 
 
