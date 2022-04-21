@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # apps
     'accounts',
     'core',
-    'forum',
+    'foruns',
     # libs
     'compressor',
     'crispy_forms',

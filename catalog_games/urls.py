@@ -10,7 +10,7 @@ urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
     path('accounts/', include('accounts.urls')),
     path('', include('core.urls')),
-    path('forum/', include('forum.urls')),
+    path('foruns/', include('foruns.urls')),
 ]
 
 if settings.DEBUG:
