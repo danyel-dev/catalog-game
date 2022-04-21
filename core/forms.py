@@ -1,11 +1,11 @@
 from dataclasses import field, fields
 from django import forms
-from .models import Message, Comment
+from .models import Contact, Comment
 
 
-class MessageForm(forms.ModelForm):
+class ContactForm(forms.ModelForm):
     class Meta:
-        model = Message
+        model = Contact
         fields = ('title', 'message')
 
         widgets = {

@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.paginator import Paginator
-from .forms import MessageForm, CommentForm
+from .forms import ContactForm, CommentForm
 
 from .models import Game
 
@@ -47,7 +47,7 @@ def game_detail(request, id_game):
 
 
 def contact(request):
-    form = MessageForm(request.POST or None)
+    form = ContactForm(request.POST or None)
 
     if request.method == 'POST':
         if form.is_valid():

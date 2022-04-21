@@ -40,9 +40,11 @@ main {
     }
 
     .card-title {
+        margin-bottom: 5px;
+        
         h1 {
             font-size: 1.6em;
-            margin: 15px 0 0 0;
+            margin: 5px 0 0 0;
 
             a {
                 color: rgba(0, 0, 0, 0.7);

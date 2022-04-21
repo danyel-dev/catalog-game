@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 
 
-class Message(models.Model):
+class Contact(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Usuário')
     title = models.CharField('Título do Comentário', max_length=100)
     message = models.TextField('Mensagem')
