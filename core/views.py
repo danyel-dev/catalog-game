@@ -41,7 +41,7 @@ def game_detail(request, id_game):
             form.game = game 
             form.save()
 
-        form = CommentForm()
+        return redirect('game-detail', id_game)
 
     return render(request, 'core/game_detail.html', {'game': game, 'form': form})
 
