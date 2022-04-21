@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block 'title' %} Foruns {% endblock %}
+
+{% block 'styles' %} 
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'foruns/scss/list_foruns.scss' %}" type="text/x-sass">
+{% endblock %}
+ 
+{% block 'main' %}
+    <p class="text-p">Hello, World!!</p>
+{% endblock %}
