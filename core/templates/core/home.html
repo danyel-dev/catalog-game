@@ -19,8 +19,8 @@
     <div class="row">
         {% include 'partials/_messages.html' %}
 
-        {% if games %}
-            {% for game in games %}
+        {% if list_objects %}
+            {% for game in list_objects %}
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card mb-5 shadow-sm">
                         <a href="{% url 'game-detail' game.id %}">
@@ -60,7 +60,7 @@
         {% endif %}
     </div>
 
-    {% if games %}
+    {% if list_objects %}
         {% include 'partials/_pagination.html' %}
     {% endif %}
 {% endblock %}

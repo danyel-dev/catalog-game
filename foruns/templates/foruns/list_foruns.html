@@ -9,5 +9,23 @@
 {% endblock %}
  
 {% block 'main' %}
-    <p class="text-p">Hello, World!!</p>
+    {% for forum in list_objects %}
+        <div class="card mb-3" style="max-width: 800px;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{{ forum.image.url }}" style="height: 100%;" class="img-fluid rounded-start" alt="...">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ forum.title }}</h5>
+                        <p class="card-text description">{{ forum.description|safe }}</p>
+                        <p class="card-text"><small class="text-muted updated_at">{{ forum.created_at }}</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    
+    {% include 'partials/_pagination.html' %}
 {% endblock %}

@@ -27,7 +27,7 @@ def home(request):
     page = request.GET.get('page')
     games = paginator.get_page(page)
 
-    return render(request, 'core/home.html', {'games': games})
+    return render(request, 'core/home.html', {'list_objects': games})
 
 
 def game_detail(request, id_game):

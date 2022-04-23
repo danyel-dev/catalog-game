@@ -1,0 +1,9 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
