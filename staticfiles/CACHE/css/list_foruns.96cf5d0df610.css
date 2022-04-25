@@ -1,0 +1,17 @@
+body {
+  background-color: whitesmoke; }
+
+main {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 150px; }
+
+#pagination {
+  margin-top: 50px; }
+
+#created-comment {
+  display: flex;
+  justify-content: space-between; }

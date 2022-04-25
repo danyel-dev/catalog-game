@@ -20,7 +20,10 @@
                     <div class="card-body">
                         <h5 class="card-title"><a href="{% url 'forum' forum.id %}">{{ forum.title }}</a></h5>
                         <p class="card-text description">{{ forum.description|safe }}</p>
-                        <p class="card-text"><small class="text-muted updated_at">{{ forum.created_at }}</small></p>
+                        <p class="card-text" id="created-comment">
+                            <small class="text-muted updated_at">{{ forum.created_at }}</small>
+                            <a href="{% url 'forum' forum.id %}#disqus_thread">comentarios</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -28,4 +31,9 @@
     {% endfor %}
     
     {% include 'partials/_pagination.html' %}
+{% endblock %}
+
+{% block 'scripts' %}
+    {{ block.super }}
+    <script id="dsq-count-scr" src="//the-last-of-us-1.disqus.com/count.js" async></script>
 {% endblock %}
