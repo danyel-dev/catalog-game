@@ -10,6 +10,10 @@ class Contact(models.Model):
     created_at = models.DateTimeField('Data de envio', auto_now_add=True)
 
 
+    def __str__(self):
+        return self.title
+
+
 class Game(models.Model):
     title = models.CharField('Título do Game', max_length=100)
     description = models.CharField('Descrição do jogo', max_length=255)
@@ -21,6 +25,10 @@ class Game(models.Model):
     tags = TaggableManager('Gêneros')
     created_at = models.DateTimeField('Data de envio', auto_now_add=True)
     updated_at = models.DateTimeField('Data de alteração', auto_now=True)
+
+
+    def __str__(self):
+        return self.title
 
 
 class GameUser(models.Model):
@@ -37,6 +45,10 @@ class GameUser(models.Model):
     status = models.CharField(verbose_name='status', max_length=20, choices=status)
     favorite = models.BooleanField(verbose_name='favorito', default=False)
     created_at = models.DateTimeField('Data de adição', auto_now_add=True)
+
+
+    def __str__(self):
+        return self.game
 
 
 class Comment(models.Model):
