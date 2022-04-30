@@ -23,6 +23,22 @@ class Game(models.Model):
     updated_at = models.DateTimeField('Data de alteração', auto_now=True)
 
 
+class GameUser(models.Model):
+    status = (
+        ('1', 'Jogar Depois'),
+        ('2', 'Não Gostei'),
+        ('3', 'Jogando'),
+        ('4', 'Dropado'),
+        ('5', 'Jogados zerados')
+    )
+
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Usuário')
+    game = models.ForeignKey(Game, on_delete=models.CASCADE, verbose_name='Jogo')
+    status = models.CharField(verbose_name='status', max_length=20, choices=status)
+    favorite = models.BooleanField(verbose_name='favorito', default=False)
+    created_at = models.DateTimeField('Data de adição', auto_now_add=True)
+
+
 class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Usuário', related_name='comment')
     game = models.ForeignKey(Game, on_delete=models.CASCADE, verbose_name='Jogo', related_name='comment')
