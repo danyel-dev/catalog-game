@@ -37,7 +37,7 @@ class GameUser(models.Model):
         ('2', 'Não Gostei'),
         ('3', 'Jogando'),
         ('4', 'Dropado'),
-        ('5', 'Jogados zerados')
+        ('5', 'Jogos zerados')
     )
 
     user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Usuário')
@@ -47,8 +47,12 @@ class GameUser(models.Model):
     created_at = models.DateTimeField('Data de adição', auto_now_add=True)
 
 
+    def show_favorite(self):
+        return self.favorite == True
+
+
     def __str__(self):
-        return self.game
+        return self.game.title
 
 
 class Comment(models.Model):

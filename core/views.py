@@ -1,10 +1,11 @@
+from ast import Subscript
 from django.shortcuts import redirect, render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib import messages
 from django.core.paginator import Paginator
 from .forms import ContactForm, CommentForm
 
-from .models import Game
+from .models import Game, GameUser
 
 
 def home(request):
@@ -44,6 +45,21 @@ def game_detail(request, id_game):
         return redirect('game-detail', id_game)
 
     return render(request, 'core/game_detail.html', {'game': game, 'form': form})
+
+
+def subscribe_game(request, id_game):
+    status = request.GET.get('status')
+    favorite = request.GET.get('favorite')
+
+    game = get_object_or_404(Game, id=id_game)
+    subscribe_game = GameUser.objects.filter(user=request.user, game=game)
+    
+    if subscribe_game:
+        if favorite:
+            sub_favorite = subscribe_game.values()[0]['favorite']
+            subscribe_game.update(favorite=not(sub_favorite))
+        
+    return render(request, 'core/dashboard.html')
 
 
 def contact(request):

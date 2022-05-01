@@ -24,14 +24,15 @@
                 </div>
                     
                 <div class="banner-favorites">
-                    <a href=""><i class="fa-solid fa-heart"></i></a>
+                    <a href="http://127.0.0.1:8000/subscribe/{{game.id}}?favorite=change"><i class="fa-solid fa-heart"></i></a>
 
-                    <select>
-                        <option selected>Escolha uma opção</option>
-                        <option>Dropado</option>
-                        <option>Jogar Depois</option>
-                        <option>Gostei</option>
-                        <option>Jogando</option>
+                    <select onchange="location.href=this.value">
+                        <option value="" selected>Escolha uma opção</option>
+                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1">Jogar Depois</option>
+                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2">Não Gostei</option>
+                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3">Jogando</option>
+                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4">Dropado</option>
+                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5">Jogos Zerados</option>
                     </select>
                 </div>
             </div>
@@ -79,4 +80,10 @@
             </form>
         </div>
     </div>
+{% endblock %}
+
+
+{% block 'scripts' %}
+    {{ block.super }}
+    <script src="{% static 'core/js/game_detail.js' %}"></script>
 {% endblock %}
