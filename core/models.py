@@ -33,6 +33,7 @@ class Game(models.Model):
 
 class GameUser(models.Model):
     status = (
+        ('0', 'vazio'),
         ('1', 'Jogar Depois'),
         ('2', 'Não Gostei'),
         ('3', 'Jogando'),

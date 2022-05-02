@@ -33,6 +33,8 @@ def home(request):
 
 def game_detail(request, id_game):
     game = get_object_or_404(Game, id = id_game)
+    subscribe = GameUser.objects.filter(user=request.user, game=game).first()
+
     form = CommentForm(request.POST or None)
     
     if request.method == 'POST':
@@ -44,7 +46,7 @@ def game_detail(request, id_game):
 
         return redirect('game-detail', id_game)
 
-    return render(request, 'core/game_detail.html', {'game': game, 'form': form})
+    return render(request, 'core/game_detail.html', {'game': game, 'form': form, 'subscribe': subscribe})
 
 
 def subscribe_game(request, id_game):
@@ -58,7 +60,14 @@ def subscribe_game(request, id_game):
         if favorite:
             sub_favorite = subscribe_game.values()[0]['favorite']
             subscribe_game.update(favorite=not(sub_favorite))
-        
+        else:
+            subscribe_game.update(status=status)
+    else:
+        if favorite:
+            GameUser.objects.create(user=request.user, game=game, favorite=True)
+        else:
+            GameUser.objects.create(user=request.user, game=game, status=status)
+
     return render(request, 'core/dashboard.html')
 
 

@@ -24,15 +24,51 @@
                 </div>
                     
                 <div class="banner-favorites">
-                    <a href="http://127.0.0.1:8000/subscribe/{{game.id}}?favorite=change"><i class="fa-solid fa-heart"></i></a>
+                    {% if subscribe.favorite %}
+                        <a href="http://127.0.0.1:8000/subscribe/{{game.id}}?favorite=change"><i class="fa-solid fa-heart" style="color: red"></i></a>
+                    {% else %}
+                        <a href="http://127.0.0.1:8000/subscribe/{{game.id}}?favorite=change"><i class="fa-solid fa-heart"></i></a>
+                    {% endif %}
 
                     <select onchange="location.href=this.value">
-                        <option value="" selected>Escolha uma opção</option>
-                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1">Jogar Depois</option>
-                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2">Não Gostei</option>
-                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3">Jogando</option>
-                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4">Dropado</option>
-                        <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5">Jogos Zerados</option>
+                        {% if subscribe.status %}
+                            {% if subscribe.status == 1 %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1" selected>Jogar Depois</option>
+                            {% else %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1">Jogar Depois</option>
+                            {% endif %}
+
+                            {% if subscribe.status == 2 %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2" selected>Não gostei</option>
+                            {% else %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2">Não gostei</option>
+                            {% endif %}
+
+                            {% if subscribe.status == 3 %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3" selected>Jogando</option>
+                            {% else %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3">Jogando</option>
+                            {% endif %}
+
+                            {% if subscribe.status == 4 %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4" selected>Dropado</option>
+                            {% else %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4">Dropado</option>
+                            {% endif %}
+
+                            {% if subscribe.status == 5 %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5" selected>Jogos zerados</option>
+                            {% else %}
+                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5">Jogos zerados</option>
+                            {% endif %}
+                        {% else %}
+                            <option value="" selected>Escolha uma opção</option>
+                            <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1">Jogar Depois</option>
+                            <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2">Não Gostei</option>
+                            <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3">Jogando</option>
+                            <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4">Dropado</option>
+                            <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5">Jogos Zerados</option>
+                        {% endif %}
                     </select>
                 </div>
             </div>
@@ -41,7 +77,6 @@
 
     <div id="about-game">
         <h1>Sobre este jogo</h1>
-
         <p class="text-about">{{ game.about|safe }}</p>
 
         <div id="comments-game">
