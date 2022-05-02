@@ -86,6 +86,14 @@ def dashboard(request):
     return render(request, 'core/dashboard.html', {'subscribes': subscribes})
 
 
+def delete_game(request, id_subscribe):
+    subscribe = get_object_or_404(GameUser, id=id_subscribe)
+    subscribe.delete()
+    messages.info(request, "Jogo deletado com sucesso")
+
+    return redirect('dashboard')
+
+
 def contact(request):
     form = ContactForm(request.POST or None)
 

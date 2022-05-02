@@ -11,6 +11,8 @@
 
 
 {% block 'main' %}
+    {% include 'partials/_messages.html' %}
+
     <div class="links-status">
         <ul class="list-status">
             <li><a href="{% url 'dashboard' %}?favorite=true" class="text-muted">Favoritos</a></li>
@@ -32,7 +34,7 @@
                         </a>
 
                         <div class="card-body">
-                            <a href=""><i class="fa-solid fa-trash-can"></i> remover</a>
+                            <a href="{% url 'delete-game' sub.id %}"><i class="fa-solid fa-trash-can"></i>remover</a>
                         </div>
                     </div>
                 </div>
