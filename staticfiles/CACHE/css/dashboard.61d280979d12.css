@@ -1,0 +1,13 @@
+main {
+  margin-top: 50px; }
+
+.links-status {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aquamarine; }
+  .links-status ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }

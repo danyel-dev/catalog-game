@@ -1,0 +1,5 @@
+.links-status {
+  margin: auto; }
+  .links-status ul {
+    display: flex;
+    list-style-type: none; }

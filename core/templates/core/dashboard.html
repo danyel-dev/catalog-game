@@ -2,8 +2,43 @@
 {% load static %}
 
 
-{% block 'title' %} Dashboard {% endblock %} 
+{% block 'title' %} Seus jogos {% endblock %} 
+
+{% block 'styles' %}
+    {{ block.super }}
+    <link rel="stylesheet" href="{% static 'core/scss/dashboard.scss' %}" type="text/x-sass">
+{% endblock %}
+
 
 {% block 'main' %}
-    olaaa
+    <div class="links-status">
+        <ul class="list-status">
+            <li><a href="{% url 'dashboard' %}?favorite=true" class="text-muted">Favoritos</a></li>
+            <li><a href="{% url 'dashboard' %}?status=1" class="text-muted">Jogar Depois</a></li>
+            <li><a href="{% url 'dashboard' %}?status=2" class="text-muted">Não Gostei</a></li>
+            <li><a href="{% url 'dashboard' %}?status=3" class="text-muted">Jogando</a></li>
+            <li><a href="{% url 'dashboard' %}?status=4" class="text-muted">Dropado</a></li>
+            <li><a href="{% url 'dashboard' %}?status=5" class="text-muted">Jogos Zerados</a></li>
+        </ul>
+    </div>
+
+    {% if subscribes %}
+        <div class="row">
+            {% for sub in subscribes %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="card mb-5 shadow-sm">
+                        <a href="#">
+                            <img src="{{ sub.game.image.url }}" class="img-fluid">
+                        </a>
+
+                        <div class="card-body">
+                            <a href=""><i class="fa-solid fa-trash-can"></i> remover</a>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <h3 class="text-muted mt-5">Nenhum jogo adicionado ainda</h3>
+    {% endif %}
 {% endblock %}

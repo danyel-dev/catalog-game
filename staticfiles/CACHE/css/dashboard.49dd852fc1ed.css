@@ -1,0 +1,29 @@
+main {
+  margin-top: 50px; }
+
+.links-status {
+  display: flex;
+  justify-content: center;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.329); }
+  .links-status ul.list-status {
+    padding: 10px 15px;
+    width: 100%;
+    margin-bottom: 0px;
+    gap: 1rem;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }
+
+div.row {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly; }
+  div.row .card {
+    margin-bottom: 20px; }
+
+@media (max-width: 600px) {
+  ul.list-status {
+    flex-direction: column;
+    align-items: center; } }

@@ -1,0 +1,6 @@
+.links-status {
+  display: flex;
+  justify-content: center; }
+  .links-status ul {
+    display: flex;
+    list-style-type: none; }

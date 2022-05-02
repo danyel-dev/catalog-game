@@ -1,0 +1,11 @@
+.main {
+  margin-top: 50px; }
+
+.links-status {
+  display: flex;
+  justify-content: center; }
+  .links-status ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }

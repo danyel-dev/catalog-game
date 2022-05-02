@@ -1,0 +1,14 @@
+main {
+  margin-top: 50px; }
+
+.links-status {
+  display: flex;
+  justify-content: center; }
+  .links-status ul {
+    width: 100%;
+    background-color: aqua;
+    margin-bottom: 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }

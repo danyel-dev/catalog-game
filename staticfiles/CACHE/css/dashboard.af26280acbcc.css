@@ -1,0 +1,7 @@
+.links-status {
+  display: flex;
+  justify-content: center; }
+  .links-status ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none; }

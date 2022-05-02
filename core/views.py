@@ -71,6 +71,21 @@ def subscribe_game(request, id_game):
     return redirect('game-detail', id_game)
 
 
+def dashboard(request):
+    subscribes = GameUser.objects.order_by('-id').filter(user=request.user, favorite=True)
+
+    status = request.GET.get('status')
+
+    if status:
+        subscribes = GameUser.objects.order_by('-id').filter(user=request.user, status=status)
+
+    paginator = Paginator(subscribes, 9)
+    page = request.GET.get('page')
+    subscribes = paginator.get_page(page)
+
+    return render(request, 'core/dashboard.html', {'subscribes': subscribes})
+
+
 def contact(request):
     form = ContactForm(request.POST or None)
 

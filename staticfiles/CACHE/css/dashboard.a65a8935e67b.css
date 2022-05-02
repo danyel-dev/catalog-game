@@ -1,0 +1,8 @@
+.links-status {
+  display: flex;
+  justify-content: center; }
+  .links-status ul {
+    display: flex !important;
+    justify-content: space-around;
+    gap: 3rem;
+    list-style-type: none; }
