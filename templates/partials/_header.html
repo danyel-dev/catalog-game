@@ -30,10 +30,6 @@
                     <a href="{% url 'contact' %}">Contato</a>
                 </li>
 
-                <li class="nav-item">
-                    <a href="{% url 'contact' %}">Da</a>
-                </li>
-
                 {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a href="{% url 'dashboard' %}">Meus jogos</a>
