@@ -22,7 +22,7 @@
                         <small class="tag-genero">{{ tag }}</small>
                     {% endfor %}
                 </div>
-                    
+
                 <div class="banner-favorites">
                     {% if subscribe.favorite %}
                         <a href="http://127.0.0.1:8000/subscribe/{{game.id}}?favorite=change"><i class="fa-solid fa-heart" style="color: red"></i></a>
@@ -32,31 +32,32 @@
 
                     <select onchange="location.href=this.value">
                         {% if subscribe.status %}
-                            {% if subscribe.status == 1 %}
+                            {% if subscribe.status == "1" %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1" selected>Jogar Depois</option>
                             {% else %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=1">Jogar Depois</option>
                             {% endif %}
 
-                            {% if subscribe.status == 2 %}
-                                <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2" selected>Não gostei</option>
+                            {% if subscribe.status == "2" %}
+                                <h1>aloooooooo</h1>
+                                <option selected value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2">Não gostei</option>
                             {% else %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=2">Não gostei</option>
                             {% endif %}
 
-                            {% if subscribe.status == 3 %}
+                            {% if subscribe.status == "3" %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3" selected>Jogando</option>
                             {% else %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=3">Jogando</option>
                             {% endif %}
 
-                            {% if subscribe.status == 4 %}
+                            {% if subscribe.status == "4" %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4" selected>Dropado</option>
                             {% else %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=4">Dropado</option>
                             {% endif %}
 
-                            {% if subscribe.status == 5 %}
+                            {% if subscribe.status == "5" %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5" selected>Jogos zerados</option>
                             {% else %}
                                 <option value="http://127.0.0.1:8000/subscribe/{{game.id}}?status=5">Jogos zerados</option>

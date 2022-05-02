@@ -68,7 +68,7 @@ def subscribe_game(request, id_game):
         else:
             GameUser.objects.create(user=request.user, game=game, status=status)
 
-    return render(request, 'core/dashboard.html')
+    return redirect('game-detail', id_game)
 
 
 def contact(request):
