@@ -79,7 +79,7 @@ def dashboard(request):
     if status:
         subscribes = GameUser.objects.order_by('-id').filter(user=request.user, status=status)
 
-    paginator = Paginator(subscribes, 9)
+    paginator = Paginator(subscribes, 2)
     page = request.GET.get('page')
     subscribes = paginator.get_page(page)
 

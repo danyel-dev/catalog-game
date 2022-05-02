@@ -41,4 +41,8 @@
     {% else %}
         <h3 class="text-muted mt-5">Nenhum jogo adicionado ainda</h3>
     {% endif %}
+
+    {% if subscribes %}
+        {% include 'partials/_pagination.html' with list_objects=subscribes %}
+    {% endif %}
 {% endblock %}
